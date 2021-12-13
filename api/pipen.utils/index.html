@@ -1,0 +1,2820 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.2.2">
+    
+    
+      
+        <title>pipen.utils - pipen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/all.css">
+    
+      <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
+    
+      <link rel="stylesheet" href="../../css/mkapi-common.css">
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pipenutils" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="pipen" class="md-header__button md-logo" aria-label="pipen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            pipen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              pipen.utils
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/pwwang/pipen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pwwang/pipen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="pipen" class="md-nav__button md-logo" aria-label="pipen" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    pipen
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/pwwang/pipen/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pwwang/pipen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../basics/" class="md-nav__link">
+        Basics
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../defining-proc/" class="md-nav__link">
+        Defining a process
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../running/" class="md-nav__link">
+        Defining and running a pipeline
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../templating/" class="md-nav__link">
+        Templating
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../channels/" class="md-nav__link">
+        Channels
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../input-output/" class="md-nav__link">
+        Input and output
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../script/" class="md-nav__link">
+        Script
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../caching/" class="md-nav__link">
+        Caching
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../error/" class="md-nav__link">
+        Error handling
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../configurations/" class="md-nav__link">
+        Configurations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../plugin/" class="md-nav__link">
+        Plugins
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scheduler/" class="md-nav__link">
+        Scheduler
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cli/" class="md-nav__link">
+        Command line iterface
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/" class="md-nav__link">
+        Examples
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Change log
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17" type="checkbox" id="__nav_17" checked>
+      
+      <label class="md-nav__link" for="__nav_17">
+        API
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="API" data-md-level="1">
+        <label class="md-nav__title" for="__nav_17">
+          <span class="md-nav__icon md-icon"></span>
+          API
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_1" type="checkbox" id="__nav_17_1" checked>
+      
+      <label class="md-nav__link" for="__nav_17_1">
+        pipen
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="pipen" data-md-level="2">
+        <label class="md-nav__title" for="__nav_17_1">
+          <span class="md-nav__icon md-icon"></span>
+          pipen
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen/" class="md-nav__link">
+        pipen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.proc/" class="md-nav__link">
+        pipen.proc
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.pluginmgr/" class="md-nav__link">
+        pipen.pluginmgr
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.pipen/" class="md-nav__link">
+        pipen.pipen
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.defaults/" class="md-nav__link">
+        pipen.defaults
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.template/" class="md-nav__link">
+        pipen.template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.exceptions/" class="md-nav__link">
+        pipen.exceptions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.version/" class="md-nav__link">
+        pipen.version
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.progressbar/" class="md-nav__link">
+        pipen.progressbar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          pipen.utils
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        pipen.utils
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenutils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrichhandler" class="md-nav__link">
+    RichHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="RichHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltereraddfilter" class="md-nav__link">
+    addFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltererremovefilter" class="md-nav__link">
+    removeFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltererfilter" class="md-nav__link">
+    filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlercreatelock" class="md-nav__link">
+    createLock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandleracquire" class="md-nav__link">
+    acquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerrelease" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlersetlevel" class="md-nav__link">
+    setLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerformat" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerhandle" class="md-nav__link">
+    handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlersetformatter" class="md-nav__link">
+    setFormatter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerflush" class="md-nav__link">
+    flush
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerclose" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerhandleerror" class="md-nav__link">
+    handleError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandleremit" class="md-nav__link">
+    emit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandlerrender_message" class="md-nav__link">
+    render_message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandlerrender" class="md-nav__link">
+    render
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrichhandlerget_level_text" class="md-nav__link">
+    get_level_text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_logger" class="md-nav__link">
+    get_logger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsdesc_from_docstring" class="md-nav__link">
+    desc_from_docstring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsupdate_dict" class="md-nav__link">
+    update_dict
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsstrsplit" class="md-nav__link">
+    strsplit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_shebang" class="md-nav__link">
+    get_shebang
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsignore_firstline_dedent" class="md-nav__link">
+    ignore_firstline_dedent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilscopy_dict" class="md-nav__link">
+    copy_dict
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_console_width" class="md-nav__link">
+    get_console_width
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_plugin_context" class="md-nav__link">
+    get_plugin_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilslog_rich_renderable" class="md-nav__link">
+    log_rich_renderable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsbrief_list" class="md-nav__link">
+    brief_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilspipen_banner" class="md-nav__link">
+    pipen_banner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_mtime" class="md-nav__link">
+    get_mtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsis_subclass" class="md-nav__link">
+    is_subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsload_entrypoints" class="md-nav__link">
+    load_entrypoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilstruncate_text" class="md-nav__link">
+    truncate_text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsmake_df_colnames_unique_inplace" class="md-nav__link">
+    make_df_colnames_unique_inplace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_base" class="md-nav__link">
+    get_base
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_17_2" type="checkbox" id="__nav_17_2" >
+      
+      <label class="md-nav__link" for="__nav_17_2">
+        pipen.cli
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="pipen.cli" data-md-level="2">
+        <label class="md-nav__title" for="__nav_17_2">
+          <span class="md-nav__icon md-icon"></span>
+          pipen.cli
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.cli/" class="md-nav__link">
+        pipen.cli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.cli.help/" class="md-nav__link">
+        pipen.cli.help
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.cli.plugins/" class="md-nav__link">
+        pipen.cli.plugins
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.cli.profile/" class="md-nav__link">
+        pipen.cli.profile
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.scheduler/" class="md-nav__link">
+        pipen.scheduler
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.channel/" class="md-nav__link">
+        pipen.channel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipen.job/" class="md-nav__link">
+        pipen.job
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pipenutils" class="md-nav__link">
+    utils
+  </a>
+  
+    <nav class="md-nav" aria-label="utils">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrichhandler" class="md-nav__link">
+    RichHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="RichHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltereraddfilter" class="md-nav__link">
+    addFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltererremovefilter" class="md-nav__link">
+    removeFilter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loggingfiltererfilter" class="md-nav__link">
+    filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlercreatelock" class="md-nav__link">
+    createLock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandleracquire" class="md-nav__link">
+    acquire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerrelease" class="md-nav__link">
+    release
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlersetlevel" class="md-nav__link">
+    setLevel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerformat" class="md-nav__link">
+    format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerhandle" class="md-nav__link">
+    handle
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlersetformatter" class="md-nav__link">
+    setFormatter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerflush" class="md-nav__link">
+    flush
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerclose" class="md-nav__link">
+    close
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logginghandlerhandleerror" class="md-nav__link">
+    handleError
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandleremit" class="md-nav__link">
+    emit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandlerrender_message" class="md-nav__link">
+    render_message
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#richloggingrichhandlerrender" class="md-nav__link">
+    render
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsrichhandlerget_level_text" class="md-nav__link">
+    get_level_text
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_logger" class="md-nav__link">
+    get_logger
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsdesc_from_docstring" class="md-nav__link">
+    desc_from_docstring
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsupdate_dict" class="md-nav__link">
+    update_dict
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsstrsplit" class="md-nav__link">
+    strsplit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_shebang" class="md-nav__link">
+    get_shebang
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsignore_firstline_dedent" class="md-nav__link">
+    ignore_firstline_dedent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilscopy_dict" class="md-nav__link">
+    copy_dict
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_console_width" class="md-nav__link">
+    get_console_width
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_plugin_context" class="md-nav__link">
+    get_plugin_context
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilslog_rich_renderable" class="md-nav__link">
+    log_rich_renderable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsbrief_list" class="md-nav__link">
+    brief_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilspipen_banner" class="md-nav__link">
+    pipen_banner
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_mtime" class="md-nav__link">
+    get_mtime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsis_subclass" class="md-nav__link">
+    is_subclass
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsload_entrypoints" class="md-nav__link">
+    load_entrypoints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilstruncate_text" class="md-nav__link">
+    truncate_text
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsmake_df_colnames_unique_inplace" class="md-nav__link">
+    make_df_colnames_unique_inplace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pipenutilsget_base" class="md-nav__link">
+    get_base
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/pwwang/pipen/edit/master/docs/api/pipen.utils.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  <h1>pipen.utils</h1>
+                
+                <div class="mkapi-node" id="pipen.utils">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object module plain top">
+    <div class="mkapi-object-kind module top">module</div>
+    <h2 id="pipenutils" class="mkapi-object-body module top"><span class="mkapi-object-prefix"><a href="../pipen/#pipen">pipen</a>.</span><span class="mkapi-object-name">utils</span></h2>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils" title="Source for pipen.utils">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Provide some utilities</p></div>
+    </div>
+  <div class="mkapi-section classes">
+      <div class="mkapi-section-name classes">
+          <span class="mkapi-section-name-body classes">Classes</span> 
+        </div>
+      <div class="mkapi-section-body classes"><ul class="mkapi-items">
+<li class="class"><code class="mkapi-item-name"><a href="#pipen.utils.RichHandler">RichHandler</a></code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Subclass of rich.logging.RichHandler, showing log levels as a singlecharacter
+<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.RichHandler" title="Source for pipen.utils.RichHandler">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section functions">
+      <div class="mkapi-section-name functions">
+          <span class="mkapi-section-name-body functions">Functions</span> 
+        </div>
+      <div class="mkapi-section-body functions"><ul class="mkapi-items">
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.brief_list">brief_list</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">blist</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Briefly show an integer list, combine the continuous numbers.<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.brief_list" title="Source for pipen.utils.brief_list">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.copy_dict">copy_dict</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">dic</code>, <code class="mkapi-object-signature">depth</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Deep copy a dict<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.copy_dict" title="Source for pipen.utils.copy_dict">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.desc_from_docstring">desc_from_docstring</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the description from docstring<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.desc_from_docstring" title="Source for pipen.utils.desc_from_docstring">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_base">get_base</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">klass</code>, <code class="mkapi-object-signature">abc_base</code>, <code class="mkapi-object-signature">value</code>, <code class="mkapi-object-signature">value_getter</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the base class where the value was first defined<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_base" title="Source for pipen.utils.get_base">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_console_width">get_console_width</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">default</code>, <code class="mkapi-object-signature">shift</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the console width<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_console_width" title="Source for pipen.utils.get_console_width">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_logger">get_logger</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name</code>, <code class="mkapi-object-signature">level</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(LoggerAdapter)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the logger by given plugin name<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_logger" title="Source for pipen.utils.get_logger">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_mtime">get_mtime</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">dir_depth</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(float)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the modification time of a path.If path is a directory, try to get the last modification time of the
+contents in the directory at given dir_depth
+<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_mtime" title="Source for pipen.utils.get_mtime">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_plugin_context">get_plugin_context</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">plugins</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(SimplugContext)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the plugin context to enable and disable plugins per pipeline<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_plugin_context" title="Source for pipen.utils.get_plugin_context">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.get_shebang">get_shebang</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">script</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the shebang of the script<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_shebang" title="Source for pipen.utils.get_shebang">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.ignore_firstline_dedent">ignore_firstline_dedent</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">text</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Like textwrap.dedent(), but ignore first empty lines<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.ignore_firstline_dedent" title="Source for pipen.utils.ignore_firstline_dedent">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.is_subclass">is_subclass</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(bool)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Tell if obj is a subclass of clsDifferences with issubclass is that we don't raise Type error if obj
+is not a class
+<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.is_subclass" title="Source for pipen.utils.is_subclass">&lt;/&gt;</a></span></li>
+
+<li class="generator"><code class="mkapi-item-name"><a href="#pipen.utils.load_entrypoints">load_entrypoints</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">group</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(iterable of (str, any))</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Load objects from setuptools entrypoints by given group name<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.load_entrypoints" title="Source for pipen.utils.load_entrypoints">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.log_rich_renderable">log_rich_renderable</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">renderable</code>, <code class="mkapi-object-signature">color</code>, <code class="mkapi-object-signature">logfunc</code>, <code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Log a rich renderable to logger<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.log_rich_renderable" title="Source for pipen.utils.log_rich_renderable">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.make_df_colnames_unique_inplace">make_df_colnames_unique_inplace</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">thedf</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Make the columns of a data frame unique<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.make_df_colnames_unique_inplace" title="Source for pipen.utils.make_df_colnames_unique_inplace">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.pipen_banner">pipen_banner</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The banner for pipen<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.pipen_banner" title="Source for pipen.utils.pipen_banner">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.strsplit">strsplit</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">string</code>, <code class="mkapi-object-signature">sep</code>, <code class="mkapi-object-signature">maxsplit</code>, <code class="mkapi-object-signature">trim</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(list of str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Split the string, with the ability to trim each part.<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.strsplit" title="Source for pipen.utils.strsplit">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.truncate_text">truncate_text</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">text</code>, <code class="mkapi-object-signature">width</code>, <code class="mkapi-object-signature">end</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Truncate a text not based on words/whitespacesOtherwise, we could use textwrap.shorten.
+<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.truncate_text" title="Source for pipen.utils.truncate_text">&lt;/&gt;</a></span></li>
+
+<li class="function"><code class="mkapi-item-name"><a href="#pipen.utils.update_dict">update_dict</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">parent</code>, <code class="mkapi-object-signature">new</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Update the new dict to the parent, but make sure parent does not change<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.update_dict" title="Source for pipen.utils.update_dict">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.RichHandler">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object class code top">
+    <div class="mkapi-object-kind class top">class</div>
+    <h3 id="pipenutilsrichhandler" class="mkapi-object-body class top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">RichHandler</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">level=0</code>, <code class="mkapi-object-signature">console=None</code>, <code class="mkapi-object-signature">show_time=True</code>, <code class="mkapi-object-signature">omit_repeated_times=True</code>, <code class="mkapi-object-signature">show_level=True</code>, <code class="mkapi-object-signature">show_path=True</code>, <code class="mkapi-object-signature">enable_link_path=True</code>, <code class="mkapi-object-signature">highlighter=None</code>, <code class="mkapi-object-signature">markup=False</code>, <code class="mkapi-object-signature">rich_tracebacks=False</code>, <code class="mkapi-object-signature">tracebacks_width=None</code>, <code class="mkapi-object-signature">tracebacks_extra_lines=3</code>, <code class="mkapi-object-signature">tracebacks_theme=None</code>, <code class="mkapi-object-signature">tracebacks_word_wrap=True</code>, <code class="mkapi-object-signature">tracebacks_show_locals=False</code>, <code class="mkapi-object-signature">locals_max_length=10</code>, <code class="mkapi-object-signature">locals_max_string=80</code>, <code class="mkapi-object-signature">log_time_format=&#39;[%x %X]&#39;</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.RichHandler" title="Source for pipen.utils.RichHandler">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section bases">
+      <div class="mkapi-section-name bases">
+          <span class="mkapi-section-name-body bases">Bases</span> 
+        </div>
+      <div class="mkapi-section-body bases">
+<span class="mkapi-base">rich.logging.RichHandler</span>
+
+<span class="mkapi-base">logging.Handler</span>
+
+<span class="mkapi-base">logging.Filterer</span>
+</div>
+    </div>
+  <div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Subclass of rich.logging.RichHandler, showing log levels as a singlecharacter</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">level</code>
+<span class="mkapi-item-type">(int or str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Log level. Defaults to logging.NOTSET.</span></li>
+
+
+<li><code class="mkapi-item-name">show_time</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Show a column for the time. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">omit_repeated_times</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Omit repetition of the same time. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">show_level</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Show a column for the level. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">show_path</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Show the path to the original log call. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">enable_link_path</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Enable terminal link of path column to file. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">highlighter</code>
+<span class="mkapi-item-type">(Highlighter, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Highlighter to style log messages, or None to use ReprHighlighter. Defaults to None.</span></li>
+
+<li><code class="mkapi-item-name">markup</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Enable console markup in log messages. Defaults to False.</span></li>
+
+<li><code class="mkapi-item-name">rich_tracebacks</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Enable rich tracebacks with syntax highlighting and formatting. Defaults to False.</span></li>
+
+<li><code class="mkapi-item-name">tracebacks_width</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Number of characters used to render tracebacks, or None for full width. Defaults to None.</span></li>
+
+<li><code class="mkapi-item-name">tracebacks_extra_lines</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Additional lines of code to render tracebacks, or None for full width. Defaults to None.</span></li>
+
+<li><code class="mkapi-item-name">tracebacks_theme</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Override pygments theme used in traceback.</span></li>
+
+<li><code class="mkapi-item-name">tracebacks_word_wrap</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Enable word wrapping of long tracebacks lines. Defaults to True.</span></li>
+
+<li><code class="mkapi-item-name">tracebacks_show_locals</code>
+<span class="mkapi-item-type">(bool, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Enable display of locals in tracebacks. Defaults to False.</span></li>
+
+<li><code class="mkapi-item-name">locals_max_length</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Maximum length of containers before abbreviating, or None for no abbreviation.Defaults to 10.
+</span></li>
+
+<li><code class="mkapi-item-name">locals_max_string</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Maximum length of string before truncating, or None to disable. Defaults to 80.</span></li>
+
+<li><code class="mkapi-item-name">log_time_format</code>
+<span class="mkapi-item-type">(Union(str, callable(datetime: text)), optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">If <code>log_time</code> is enabled, either string for strftime or callable that formats the time. Defaults to "[%x %X] ".</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section methods">
+      <div class="mkapi-section-name methods">
+          <span class="mkapi-section-name-body methods">Methods</span> 
+        </div>
+      <div class="mkapi-section-body methods"><ul class="mkapi-items">
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.acquire">acquire</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Acquire the I/O thread lock.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.acquire" title="Source for logging.Handler.acquire">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Filterer.addFilter">addFilter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filter</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Add the specified filter to this handler.<a class="mkapi-src-link" href="../source/logging/#logging.Filterer.addFilter" title="Source for logging.Filterer.addFilter">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.close">close</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Tidy up any resources used by the handler.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.close" title="Source for logging.Handler.close">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.createLock">createLock</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Acquire a thread lock for serializing access to the underlying I/O.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.createLock" title="Source for logging.Handler.createLock">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#rich.logging.RichHandler.emit">emit</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Invoked by logging.<a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.emit" title="Source for rich.logging.RichHandler.emit">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Filterer.filter">filter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Determine if a record is loggable by consulting all the filters.<a class="mkapi-src-link" href="../source/logging/#logging.Filterer.filter" title="Source for logging.Filterer.filter">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.flush">flush</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Ensure all logging output has been flushed.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.flush" title="Source for logging.Handler.flush">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.format">format</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Format the specified record.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.format" title="Source for logging.Handler.format">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#pipen.utils.RichHandler.get_level_text">get_level_text</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(Text)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Get the level name from the record.<a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.RichHandler.get_level_text" title="Source for pipen.utils.RichHandler.get_level_text">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.handle">handle</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Conditionally emit the specified logging record.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.handle" title="Source for logging.Handler.handle">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.handleError">handleError</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Handle errors which occur during an emit() call.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.handleError" title="Source for logging.Handler.handleError">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.release">release</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Release the I/O thread lock.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.release" title="Source for logging.Handler.release">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Filterer.removeFilter">removeFilter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filter</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Remove the specified filter from this handler.<a class="mkapi-src-link" href="../source/logging/#logging.Filterer.removeFilter" title="Source for logging.Filterer.removeFilter">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#rich.logging.RichHandler.render">render</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code>, <code class="mkapi-object-signature">traceback</code>, <code class="mkapi-object-signature">message_renderable</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(ConsoleRenderable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Render log for display.<a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.render" title="Source for rich.logging.RichHandler.render">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#rich.logging.RichHandler.render_message">render_message</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code>, <code class="mkapi-object-signature">message</code><code class="mkapi-object-parenthesis">)</code>
+<span class="mkapi-item-type">(ConsoleRenderable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Render message text in to Text.<a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.render_message" title="Source for rich.logging.RichHandler.render_message">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.setFormatter">setFormatter</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">fmt</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Set the formatter for this handler.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.setFormatter" title="Source for logging.Handler.setFormatter">&lt;/&gt;</a></span></li>
+
+<li class="method"><code class="mkapi-item-name"><a href="#logging.Handler.setLevel">setLevel</a></code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">level</code><code class="mkapi-object-parenthesis">)</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Set the logging level of this handler.  level must be an int or a str.<a class="mkapi-src-link" href="../source/logging/#logging.Handler.setLevel" title="Source for logging.Handler.setLevel">&lt;/&gt;</a></span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+  <div class="mkapi-members">
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Filterer.addFilter">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="loggingfiltereraddfilter" class="mkapi-object-body method"><code class="mkapi-object-name">addFilter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filter</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Filterer.addFilter" title="Source for logging.Filterer.addFilter">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Add the specified filter to this handler.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Filterer.removeFilter">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="loggingfiltererremovefilter" class="mkapi-object-body method"><code class="mkapi-object-name">removeFilter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">filter</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Filterer.removeFilter" title="Source for logging.Filterer.removeFilter">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Remove the specified filter from this handler.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Filterer.filter">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="loggingfiltererfilter" class="mkapi-object-body method"><code class="mkapi-object-name">filter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Filterer.filter" title="Source for logging.Filterer.filter">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Determine if a record is loggable by consulting all the filters.</p><p>The default is to allow the record to be logged; any filter can veto
+this and the record is then dropped. Returns a zero value if a record
+is to be dropped, else non-zero.</p>
+<p>.. versionchanged:: 3.2</p>
+<p>Allow filters to be just callables.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.createLock">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlercreatelock" class="mkapi-object-body method"><code class="mkapi-object-name">createLock</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.createLock" title="Source for logging.Handler.createLock">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Acquire a thread lock for serializing access to the underlying I/O.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.acquire">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandleracquire" class="mkapi-object-body method"><code class="mkapi-object-name">acquire</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.acquire" title="Source for logging.Handler.acquire">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Acquire the I/O thread lock.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.release">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerrelease" class="mkapi-object-body method"><code class="mkapi-object-name">release</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.release" title="Source for logging.Handler.release">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Release the I/O thread lock.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.setLevel">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlersetlevel" class="mkapi-object-body method"><code class="mkapi-object-name">setLevel</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">level</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.setLevel" title="Source for logging.Handler.setLevel">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Set the logging level of this handler.  level must be an int or a str.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.format">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerformat" class="mkapi-object-body method"><code class="mkapi-object-name">format</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.format" title="Source for logging.Handler.format">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Format the specified record.</p><p>If a formatter is set, use it. Otherwise, use the default formatter
+for the module.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.handle">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerhandle" class="mkapi-object-body method"><code class="mkapi-object-name">handle</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.handle" title="Source for logging.Handler.handle">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Conditionally emit the specified logging record.</p><p>Emission depends on filters which may have been added to the handler.
+Wrap the actual emission of the record with acquisition/release of
+the I/O thread lock. Returns whether the filter passed the record for
+emission.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.setFormatter">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlersetformatter" class="mkapi-object-body method"><code class="mkapi-object-name">setFormatter</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">fmt</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.setFormatter" title="Source for logging.Handler.setFormatter">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Set the formatter for this handler.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.flush">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerflush" class="mkapi-object-body method"><code class="mkapi-object-name">flush</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.flush" title="Source for logging.Handler.flush">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Ensure all logging output has been flushed.</p><p>This version does nothing and is intended to be implemented by
+subclasses.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.close">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerclose" class="mkapi-object-body method"><code class="mkapi-object-name">close</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.close" title="Source for logging.Handler.close">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tidy up any resources used by the handler.</p><p>This version removes the handler from an internal map of handlers,
+_handlers, which is used for handler lookup by name. Subclasses
+should ensure that this gets called from overridden close()
+methods.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="logging.Handler.handleError">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="logginghandlerhandleerror" class="mkapi-object-body method"><code class="mkapi-object-name">handleError</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/logging/#logging.Handler.handleError" title="Source for logging.Handler.handleError">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Handle errors which occur during an emit() call.</p><p>This method should be called from handlers when an exception is
+encountered during an emit() call. If raiseExceptions is false,
+exceptions get silently ignored. This is what is mostly wanted
+for a logging system - most users will not care about errors in
+the logging system, they are more interested in application errors.
+You could, however, replace this with a custom handler if you wish.
+The record which was being processed is passed in to this method.</p>
+</div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="rich.logging.RichHandler.emit">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="richloggingrichhandleremit" class="mkapi-object-body method"><code class="mkapi-object-name">emit</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.emit" title="Source for rich.logging.RichHandler.emit">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Invoked by logging.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="rich.logging.RichHandler.render_message">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="richloggingrichhandlerrender_message" class="mkapi-object-body method"><code class="mkapi-object-name">render_message</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code>, <code class="mkapi-object-signature">message</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.render_message" title="Source for rich.logging.RichHandler.render_message">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Render message text in to Text.</p><p>record (LogRecord): logging Record.
+message (str): String containing log message.</p>
+</div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(ConsoleRenderable)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>Renderable to display log message.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="rich.logging.RichHandler.render">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="richloggingrichhandlerrender" class="mkapi-object-body method"><code class="mkapi-object-name">render</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code>, <code class="mkapi-object-signature">traceback</code>, <code class="mkapi-object-signature">message_renderable</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/rich.logging/#rich.logging.RichHandler.render" title="Source for rich.logging.RichHandler.render">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Render log for display.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">record</code>
+<span class="mkapi-item-type">(LogRecord)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">logging Record.</span></li>
+
+<li><code class="mkapi-item-name">traceback</code>
+<span class="mkapi-item-type">(Optional[Traceback])</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Traceback instance or None for no Traceback.</span></li>
+
+<li><code class="mkapi-item-name">message_renderable</code>
+<span class="mkapi-item-type">(ConsoleRenderable)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Renderable (typically Text) containing log message contents.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(ConsoleRenderable)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>Renderable to display log.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+    <div class="mkapi-member">
+      <div class="mkapi-node" id="pipen.utils.RichHandler.get_level_text">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object method code">
+    <div class="mkapi-object-kind method">method</div>
+    <h4 id="pipenutilsrichhandlerget_level_text" class="mkapi-object-body method"><code class="mkapi-object-name">get_level_text</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">record</code><code class="mkapi-object-parenthesis">)</code></h4>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.RichHandler.get_level_text" title="Source for pipen.utils.RichHandler.get_level_text">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the level name from the record.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">record</code>
+<span class="mkapi-item-type">(LogRecord)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">LogRecord instance.</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(Text)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>A tuple of the style and level name.</p></div>
+    </div>
+  </div>
+
+</div>
+    </div>
+  
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_logger">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_logger" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_logger</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">name=&#39;main&#39;</code>, <code class="mkapi-object-signature">level=None</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_logger" title="Source for pipen.utils.get_logger">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the logger by given plugin name</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+
+<li><code class="mkapi-item-name">level</code>
+<span class="mkapi-item-type">(str or int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The initial level of the logger</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(LoggerAdapter)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The logger</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.desc_from_docstring">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsdesc_from_docstring" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">desc_from_docstring</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.desc_from_docstring" title="Source for pipen.utils.desc_from_docstring">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the description from docstring</p><p>Only extract the summary.</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The object with docstring</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The summary as desc</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.update_dict">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsupdate_dict" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">update_dict</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">parent</code>, <code class="mkapi-object-signature">new</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.update_dict" title="Source for pipen.utils.update_dict">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Update the new dict to the parent, but make sure parent does not change</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">parent</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The parent dictionary</span></li>
+
+<li><code class="mkapi-item-name">new</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The new dictionary</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The updated dictionary or None if both parent and new are None.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.strsplit">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsstrsplit" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">strsplit</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">string</code>, <code class="mkapi-object-signature">sep</code>, <code class="mkapi-object-signature">maxsplit=-1</code>, <code class="mkapi-object-signature">trim=&#39;both&#39;</code><code class="mkapi-object-parenthesis">)</code><span class="mkapi-item-type"> &#x2192; list of str</span></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.strsplit" title="Source for pipen.utils.strsplit">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Split the string, with the ability to trim each part.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_shebang">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_shebang" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_shebang</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">script</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_shebang" title="Source for pipen.utils.get_shebang">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the shebang of the script</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">script</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The script string</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>None if the script does not contain a shebang, otherwise the shebangwithout <code>#!</code> prefix</p>
+</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.ignore_firstline_dedent">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsignore_firstline_dedent" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">ignore_firstline_dedent</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">text</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.ignore_firstline_dedent" title="Source for pipen.utils.ignore_firstline_dedent">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Like textwrap.dedent(), but ignore first empty lines</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">text</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The text the be dedented</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The dedented text</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.copy_dict">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilscopy_dict" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">copy_dict</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">dic</code>, <code class="mkapi-object-signature">depth=1</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.copy_dict" title="Source for pipen.utils.copy_dict">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Deep copy a dict</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">dic</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The dict to be copied</span></li>
+
+<li><code class="mkapi-item-name">depth</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The depth to be deep copied</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The deep-copied dict</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_console_width">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_console_width" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_console_width</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">default=80</code>, <code class="mkapi-object-signature">shift=26</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_console_width" title="Source for pipen.utils.get_console_width">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the console width</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">default</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The default console width if failed to get</span></li>
+
+<li><code class="mkapi-item-name">shift</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The shift to subtract from the widthas we have time, level, plugin name in log
+</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(int)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The width of the console</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_plugin_context">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_plugin_context" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_plugin_context</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">plugins</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_plugin_context" title="Source for pipen.utils.get_plugin_context">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the plugin context to enable and disable plugins per pipeline</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">plugins</code>
+<span class="mkapi-item-type">(list of any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">A list of plugins to enable or a list of names with 'no:'as prefix to disable
+</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(SimplugContext)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The plugin context manager</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.log_rich_renderable">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilslog_rich_renderable" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">log_rich_renderable</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">renderable</code>, <code class="mkapi-object-signature">color</code>, <code class="mkapi-object-signature">logfunc</code>, <code class="mkapi-object-signature">*args</code>, <code class="mkapi-object-signature">**kwargs</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.log_rich_renderable" title="Source for pipen.utils.log_rich_renderable">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Log a rich renderable to logger</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">renderable</code>
+<span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The rich renderable</span></li>
+
+
+<li><code class="mkapi-item-name">logfunc</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The log function, if message is not the first argument,use functools.partial to wrap it
+</span></li>
+
+<li><code class="mkapi-item-name">*args</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The arguments to the log function</span></li>
+
+<li><code class="mkapi-item-name">**kwargs</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The keyword arguments to the log function</span></li>
+
+<li><code class="mkapi-item-name">splitline</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Whether split the lines or log the entire message</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.brief_list">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsbrief_list" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">brief_list</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">blist</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.brief_list" title="Source for pipen.utils.brief_list">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Briefly show an integer list, combine the continuous numbers.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">blist</code>
+<span class="mkapi-item-type">(list of int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The list</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The string to show for the briefed list.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.pipen_banner">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilspipen_banner" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">pipen_banner</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.pipen_banner" title="Source for pipen.utils.pipen_banner">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>The banner for pipen</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(ConsoleRenderable, RichCast, or str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The banner renderable</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_mtime">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_mtime" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_mtime</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">path</code>, <code class="mkapi-object-signature">dir_depth=1</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_mtime" title="Source for pipen.utils.get_mtime">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the modification time of a path.If path is a directory, try to get the last modification time of the
+contents in the directory at given dir_depth</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+
+<li><code class="mkapi-item-name">dir_depth</code>
+<span class="mkapi-item-type">(int, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The depth of the directory to check thelast modification time
+</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(float)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The last modification time of path</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.is_subclass">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsis_subclass" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">is_subclass</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">obj</code>, <code class="mkapi-object-signature">cls</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.is_subclass" title="Source for pipen.utils.is_subclass">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Tell if obj is a subclass of clsDifferences with issubclass is that we don't raise Type error if obj
+is not a class</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">obj</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The object to check</span></li>
+
+<li><code class="mkapi-item-name">cls</code>
+<span class="mkapi-item-type">(type)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The class to check</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(bool)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>True if obj is a subclass of cls otherwise False</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.load_entrypoints">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object generator code top">
+    <div class="mkapi-object-kind generator top">generator</div>
+    <h3 id="pipenutilsload_entrypoints" class="mkapi-object-body generator top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">load_entrypoints</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">group</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.load_entrypoints" title="Source for pipen.utils.load_entrypoints">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Load objects from setuptools entrypoints by given group name</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">group</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The group name of the entrypoints</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(iterable of (str, any))</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>An iterable of tuples with name and the loaded object</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.truncate_text">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilstruncate_text" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">truncate_text</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">text</code>, <code class="mkapi-object-signature">width</code>, <code class="mkapi-object-signature">end=&#39;…&#39;</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.truncate_text" title="Source for pipen.utils.truncate_text">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Truncate a text not based on words/whitespacesOtherwise, we could use textwrap.shorten.</p>
+</div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">text</code>
+<span class="mkapi-item-type">(str)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The text to be truncated</span></li>
+
+<li><code class="mkapi-item-name">width</code>
+<span class="mkapi-item-type">(int)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The max width of the the truncated text</span></li>
+
+<li><code class="mkapi-item-name">end</code>
+<span class="mkapi-item-type">(str, optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The end string of the truncated text</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(str)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>The truncated text with end appended.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.make_df_colnames_unique_inplace">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsmake_df_colnames_unique_inplace" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">make_df_colnames_unique_inplace</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">thedf</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.make_df_colnames_unique_inplace" title="Source for pipen.utils.make_df_colnames_unique_inplace">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Make the columns of a data frame unique</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">thedf</code>
+<span class="mkapi-item-type">(pandas.DataFrame)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The data frame</span></li>
+
+
+</ul></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="pipen.utils.get_base">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <h3 id="pipenutilsget_base" class="mkapi-object-body function top"><code class="mkapi-object-prefix"><a href="#pipen.utils">pipen.utils</a>.</code><code class="mkapi-object-name">get_base</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">klass</code>, <code class="mkapi-object-signature">abc_base</code>, <code class="mkapi-object-signature">value</code>, <code class="mkapi-object-signature">value_getter</code><code class="mkapi-object-parenthesis">)</code></h3>
+  </div>
+  <div class="mkapi-src-link">
+    <a class="mkapi-src-link" href="../source/pipen.utils/#pipen.utils.get_base" title="Source for pipen.utils.get_base">&lt;/&gt;</a>
+  </div>
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the base class where the value was first defined</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">klass</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The class</span></li>
+
+<li><code class="mkapi-item-name">abc_base</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The very base class to check in <strong>bases</strong></span></li>
+
+<li><code class="mkapi-item-name">value</code>
+<span class="mkapi-item-type">(any)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">The value to check</span></li>
+
+<li><code class="mkapi-item-name">value_getter</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">How to get the value from the class</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The base class</p></div>
+    </div>
+  </div>
+
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../pipen.progressbar/" class="md-footer__link md-footer__link--prev" aria-label="Previous: pipen.progressbar" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              pipen.progressbar
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../pipen.cli/" class="md-footer__link md-footer__link--next" aria-label="Next: pipen.cli" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              pipen.cli
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2b46852b.min.js"></script>
+      
+        <script src="../../js/mkapi.js"></script>
+      
+    
+  </body>
+</html>
